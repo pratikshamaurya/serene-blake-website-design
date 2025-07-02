@@ -23,23 +23,23 @@ const Hero = () => {
       <div className="absolute inset-0 hero-pattern opacity-30"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6 fade-in">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-4 sm:mb-6 fade-in leading-tight">
             Find Your Path to
             <span className="block text-primary">Healing & Growth</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto slide-up">
+          <h2 className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto slide-up px-4 sm:px-0 leading-relaxed">
             Compassionate, evidence-based therapy to help you overcome anxiety, 
             strengthen relationships, and heal from trauma in Los Angeles
           </h2>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center slide-up">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center slide-up px-4 sm:px-0">
             <Button
               onClick={scrollToContact}
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary-hover px-8 py-4 text-lg font-medium shadow-lg"
+              className="bg-primary text-primary-foreground hover:bg-primary-hover px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium shadow-lg w-full sm:w-auto"
             >
               Book a Free Consultation
             </Button>
@@ -48,14 +48,14 @@ const Hero = () => {
               variant="outline"
               size="lg"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto"
             >
               Learn More
             </Button>
           </div>
 
-          <div className="mt-12 text-sm text-muted-foreground fade-in">
-            <p>Dr. Serena Blake, PsyD • Licensed Clinical Psychologist</p>
+          <div className="mt-8 sm:mt-12 text-xs sm:text-sm text-muted-foreground fade-in px-4 sm:px-0">
+            <p className="mb-1">Dr. Serena Blake, PsyD • Licensed Clinical Psychologist</p>
             <p>8+ years experience • 500+ successful sessions</p>
           </div>
         </div>

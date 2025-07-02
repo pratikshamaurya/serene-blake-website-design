@@ -101,31 +101,31 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 sm:mb-6 px-4 sm:px-0">
               Get in Touch
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
               Ready to take the first step? Reach out for a free consultation to see how I can support your journey
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Contact Form */}
             <Card className="border-border shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-foreground">
+                <CardTitle className="text-xl sm:text-2xl font-serif text-foreground">
                   Send Me a Message
                 </CardTitle>
-                <p className="text-muted-foreground">
+                <p className="text-sm sm:text-base text-muted-foreground">
                   Fill out the form below and I'll get back to you within 24 hours.
                 </p>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Full Name *
@@ -225,7 +225,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary-hover py-3 text-lg font-medium"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary-hover py-2.5 sm:py-3 text-base sm:text-lg font-medium"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
@@ -234,49 +234,49 @@ const Contact = () => {
             </Card>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <Card className="border-border shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-xl font-serif text-foreground">
+                  <CardTitle className="text-lg sm:text-xl font-serif text-foreground">
                     Office Information
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-3 sm:space-y-4">
                   <div>
-                    <h4 className="font-medium text-foreground mb-2">Address</h4>
-                    <p className="text-muted-foreground">
+                    <h4 className="font-medium text-foreground mb-1 sm:mb-2 text-sm sm:text-base">Address</h4>
+                    <p className="text-muted-foreground text-sm sm:text-base">
                       1287 Maplewood Drive<br />
                       Los Angeles, CA 90026
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-foreground mb-2">Phone</h4>
-                    <p className="text-muted-foreground">(323) 555-0192</p>
+                    <h4 className="font-medium text-foreground mb-1 sm:mb-2 text-sm sm:text-base">Phone</h4>
+                    <p className="text-muted-foreground text-sm sm:text-base">(323) 555-0192</p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-foreground mb-2">Email</h4>
-                    <p className="text-muted-foreground">serena@blakepsychology.com</p>
+                    <h4 className="font-medium text-foreground mb-1 sm:mb-2 text-sm sm:text-base">Email</h4>
+                    <p className="text-muted-foreground text-sm sm:text-base">serena@blakepsychology.com</p>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="border-border shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-xl font-serif text-foreground">
+                  <CardTitle className="text-lg sm:text-xl font-serif text-foreground">
                     Office Hours
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-3 sm:space-y-4">
                   <div>
-                    <h4 className="font-medium text-foreground mb-2">In-Person Sessions</h4>
-                    <p className="text-muted-foreground">
+                    <h4 className="font-medium text-foreground mb-1 sm:mb-2 text-sm sm:text-base">In-Person Sessions</h4>
+                    <p className="text-muted-foreground text-sm sm:text-base">
                       Tuesday & Thursday<br />
                       10:00 AM – 6:00 PM
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-foreground mb-2">Virtual Sessions (Zoom)</h4>
-                    <p className="text-muted-foreground">
+                    <h4 className="font-medium text-foreground mb-1 sm:mb-2 text-sm sm:text-base">Virtual Sessions (Zoom)</h4>
+                    <p className="text-muted-foreground text-sm sm:text-base">
                       Monday, Wednesday & Friday<br />
                       1:00 PM – 5:00 PM
                     </p>
@@ -285,15 +285,15 @@ const Contact = () => {
               </Card>
 
               <Card className="border-border shadow-lg bg-accent">
-                <CardContent className="p-6">
-                  <h4 className="font-serif font-semibold text-lg text-foreground mb-3">
+                <CardContent className="p-4 sm:p-6">
+                  <h4 className="font-serif font-semibold text-base sm:text-lg text-foreground mb-2 sm:mb-3">
                     Free Consultation
                   </h4>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed">
                     Not sure if therapy is right for you? I offer a free 15-minute consultation 
                     to discuss your needs and answer any questions about my approach.
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     <strong>Response Time:</strong> I typically respond to new inquiries within 24 hours.
                   </p>
                 </CardContent>

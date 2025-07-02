@@ -30,26 +30,26 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 sm:mb-6 px-4 sm:px-0">
               Specialized Services
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
               Personalized therapy approaches tailored to your unique needs and goals
             </p>
           </div>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group overflow-hidden border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <Card key={index} className="group overflow-hidden border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-48 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
@@ -60,7 +60,7 @@ const Services = () => {
                 </div>
                 
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-xl font-serif text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-lg sm:text-xl font-serif text-foreground group-hover:text-primary transition-colors">
                     {service.title}
                   </CardTitle>
                   <div className="flex flex-wrap gap-2">
@@ -73,7 +73,7 @@ const Services = () => {
                 </CardHeader>
                 
                 <CardContent className="pt-0">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </CardContent>
@@ -82,18 +82,18 @@ const Services = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-16">
-            <div className="bg-accent rounded-2xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-serif font-semibold text-foreground mb-4">
+          <div className="text-center mt-12 sm:mt-16">
+            <div className="bg-accent rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-serif font-semibold text-foreground mb-3 sm:mb-4 px-4 sm:px-0">
                 Ready to Begin Your Healing Journey?
               </h3>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 px-4 sm:px-0 leading-relaxed">
                 Every healing journey starts with a single step. Let's take that step together 
                 in a safe, supportive environment designed for your growth and well-being.
               </p>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-primary text-primary-foreground hover:bg-primary-hover px-8 py-3 rounded-lg font-medium transition-colors shadow-lg"
+                className="bg-primary text-primary-foreground hover:bg-primary-hover px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium transition-colors shadow-lg text-sm sm:text-base w-full sm:w-auto max-w-sm sm:max-w-none"
               >
                 Schedule Your Free Consultation
               </button>
